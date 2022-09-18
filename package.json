@@ -1,0 +1,23 @@
+{
+  "name": "bestfilms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npx live-server --open=src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrey048/Best-films.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrey048/Best-films/issues"
+  },
+  "homepage": "https://github.com/Andrey048/Best-films#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

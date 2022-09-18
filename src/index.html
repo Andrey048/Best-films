@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best films</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <main class="container">
+        <div class="main-box">
+            <h1 class="main-box__title">Топ лучших фильмов по версии <a href="https://www.kinopoisk.ru/">кинопоиск</a></h1>
+            <div class="main-box__wrapper wrapper-items">
+                <div class="wrapper-items__body">
+                    <!-- Сюда загрузятся картинки -->
+                </div>
+                <div class="wrapper-items__loader-outer">
+                    <img class="wrapper-items__loader hidden" src="img/loader.gif" alt="Идёт загрузка">
+                </div>
+            </div>
+            <button class="main-box__btn" type="button">Показать ещё</button>
+        </div>
+    </main>
+
+    <template id="template-film-item">
+        <article class="item-film">
+            <div class="item-film__img-outer">
+                <img class="item-film__img" src="#" alt="Шаблон">
+            </div>
+            <h3 class="item-film__title"></h3>
+        </article>
+    </template>
+</body>
+</html>

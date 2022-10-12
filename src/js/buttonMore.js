@@ -1,17 +1,15 @@
-import {getFilms} from '../js/api.js';
-import {renderItems} from '../js/itemsFilms.js';
-import {toggleLoader} from '../js/util.js';
+export function setClickBtnMore(cb) {
+	const buttonMore = document.querySelector(".main-box__btn");
 
-const buttonMore = document.querySelector(".main-box__btn");
+	buttonMore.addEventListener('click', evt => {
+		evt.preventDefault();
 
-let numberDownload = 0;
+		cb();
+	})
 
-buttonMore.addEventListener("click", () => {
-	numberDownload++;
+	buttonMore.onclick = function(evt) {
+		evt.preventDefault();
 
-	getFilms(cbOnSuccesMore, numberDownload);
-
-	function cbOnSuccesMore(films) {
-		renderItems(films);
+		cb();
 	}
-})
+}

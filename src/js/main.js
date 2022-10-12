@@ -1,9 +1,13 @@
-import {getFilms} from '../js/api.js';
-import {renderItems} from '../js/itemsFilms.js';
-import '../js/buttonMore.js';
+import {getFilms} from './api.js';
+import {renderItems} from './itemsFilms.js';
+import { setClickBtnMore } from './buttonMore.js';
 
-getFilms(cbOnSuccesMainDownload, 0)
 
-function cbOnSuccesMainDownload(films) {
-	renderItems(films);
+
+showFilms();
+
+setClickBtnMore(showFilms);
+
+function showFilms() {
+	return getFilms(renderItems);
 }

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "npx live-server --open=src"
+    "server": "npx live-server --open=src",
+    "lint": "npx eslint src/js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/Andrey048/Best-films#readme",
   "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-google": "^0.14.0",
     "live-server": "^1.2.2"
   }
 }

@@ -4,10 +4,15 @@ import { setClickBtnMore } from './buttonMore.js';
 
 
 
-showFilms();
+showFilms(1);
 
 setClickBtnMore(showFilms);
 
-function showFilms() {
-	return getFilms(renderItems);
+function showFilms(downloadPage) {
+	const promiseFilms = getFilms(downloadPage);
+	
+	promiseFilms
+		.then((films) =>{
+			renderItems(films);
+		});
 }

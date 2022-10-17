@@ -1,15 +1,11 @@
 export function setClickBtnMore(cb) {
 	const buttonMore = document.querySelector(".main-box__btn");
-
-	buttonMore.addEventListener('click', evt => {
-		evt.preventDefault();
-
-		cb();
-	})
+	let downloadPage = 1;
 
 	buttonMore.onclick = function(evt) {
 		evt.preventDefault();
 
-		cb();
+		downloadPage ++;
+		cb(downloadPage);
 	}
 }

@@ -2,9 +2,7 @@ import {toggleLoader} from './util.js';
 
 
 
-let downloadPage = 1;
-
-export async function getFilms(onSucces) {
+export async function getFilms(downloadPage, onSucces) {
     toggleLoader();
     
     const URL = `https://kinopoiskapiunofficial.tech/api/v2.2/films/top?page=${downloadPage}`;
@@ -18,13 +16,12 @@ export async function getFilms(onSucces) {
             headers: requestHeaders,
         });
 
-        const dataFilms = await request.json();
+        const result = await request.json();
 
-        onSucces(dataFilms.films);
-        downloadPage++;
+        toggleLoader();
+
+        return result.films;
     } catch(err) {
         alert(err);
     }
-
-    toggleLoader();
 }

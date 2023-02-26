@@ -1,7 +1,7 @@
-import {getFilms} from './api.js';
-import {renderItems} from './itemsFilms.js';
+import { getFilms } from './api.js';
+import { renderItems } from './itemFilms.js';
 import { setClickBtnMore } from './buttonMore.js';
-import {toggleLoader} from './util.js';
+import { toggleLoader } from './util.js';
 
 showFilms();
 setClickBtnMore(showFilms);

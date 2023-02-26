@@ -2,17 +2,11 @@ import {getFilms} from './api.js';
 import {renderItems} from './itemsFilms.js';
 import { setClickBtnMore } from './buttonMore.js';
 
-
-
-showFilms(1);
-
+showFilms();
 setClickBtnMore(showFilms);
 
-function showFilms(downloadPage) {
-	const promiseFilms = getFilms(downloadPage);
-	
-	promiseFilms
-		.then((films) =>{
-			renderItems(films);
-		});
+function showFilms(numberPage = 1) {
+	const filmsRequest = getFilms(numberPage);
+
+	filmsRequest.then(films => renderItems(films));
 }

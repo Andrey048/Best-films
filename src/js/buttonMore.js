@@ -1,11 +1,13 @@
-export function setClickBtnMore(cb) {
+function setClickBtnMore(cb) {
 	const buttonMore = document.querySelector(".main-box__btn");
-	let downloadPage = 1;
+	let clickCount = 0;
 
 	buttonMore.onclick = function(evt) {
 		evt.preventDefault();
 
-		downloadPage ++;
-		cb(downloadPage);
+		clickCount ++;
+		cb(clickCount + 1);
 	}
 }
+
+export { setClickBtnMore };

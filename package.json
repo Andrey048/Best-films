@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npx live-server --open=src",
-    "lint": "npx eslint src/js"
+    "lint": "npx eslint src/js",
+    "stylelint": "npx stylelint \"./src/css/*.css\" --ignore-pattern src/css/reset.css"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
   "devDependencies": {
     "eslint": "^8.23.1",
     "eslint-config-google": "^0.14.0",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "stylelint": "^15.2.0",
+    "stylelint-config-htmlacademy": "^1.1.4"
   }
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npx live-server --open=src",
-    "lint": "npx eslint src/js",
+    "eslint": "npx eslint src/js/*.js --fix",
     "stylelint": "npx stylelint \"./src/css/*.css\" --ignore-pattern src/css/reset.css"
   },
   "repository": {
@@ -21,7 +21,9 @@
   "homepage": "https://github.com/Andrey048/Best-films#readme",
   "devDependencies": {
     "eslint": "^8.23.1",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.27.5",
     "live-server": "^1.2.2",
     "stylelint": "^15.2.0",
     "stylelint-config-htmlacademy": "^1.1.4"

@@ -1,13 +1,13 @@
 function setClickBtnMore(cb) {
-	const buttonMore = document.querySelector(".main-box__btn");
-	let clickCount = 0;
+  const buttonMore = document.querySelector('.main-box__btn');
+  let clickCount = 0;
 
-	buttonMore.onclick = function(evt) {
-		evt.preventDefault();
+  buttonMore.addEventListener('click', (evt) => {
+    evt.preventDefault();
 
-		clickCount ++;
-		cb(clickCount + 1);
-	}
+    clickCount += 1;
+    cb(clickCount + 1);
+  });
 }
 
-export { setClickBtnMore };
+export default setClickBtnMore;

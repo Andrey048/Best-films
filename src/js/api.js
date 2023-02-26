@@ -1,8 +1,4 @@
-import {toggleLoader} from './util.js';
-
-async function getFilms(numberPage) {
-    toggleLoader();
-    
+async function getFilms(numberPage) {    
     const URL = `https://kinopoiskapiunofficial.tech/api/v2.2/films/top?page=${numberPage}`;
     const requestHeaders = new Headers({
         "accept": "application/json",
@@ -12,9 +8,6 @@ async function getFilms(numberPage) {
     try {
         const request = await fetch(URL, { headers: requestHeaders });
         const result = await request.json();
-
-        toggleLoader();
-
         return result.films;
     } catch(err) {
         alert(err);
